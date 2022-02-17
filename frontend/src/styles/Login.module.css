@@ -1,18 +1,20 @@
 .loginLayoutBackground {
     box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.445);
-    height: 100vh;
     display: flex;
     justify-content: center;
+    min-height: 100vh;
 }
 
 .loginLayoutInner {
     width: 85%;
     margin-top: 0px;
     z-index: 10;
+    padding-bottom: 100px;
+
 }
 
 .loginHeader {
-    margin-bottom: 50px;
+    margin-bottom: 30px;
     margin-top: 50px;
 }
 
