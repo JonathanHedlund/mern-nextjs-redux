@@ -1,4 +1,5 @@
 import styles from '../styles/Login.module.css'
+const backgroundImage = '/blob-scene-haikei.svg'
 
 const LoginLayout = ({children}) => {
 

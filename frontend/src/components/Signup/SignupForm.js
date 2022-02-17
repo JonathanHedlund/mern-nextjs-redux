@@ -38,7 +38,7 @@ const SignupForm = ({formData, setFormData}) => {
     
     async function onSubmit(e) {
         e.preventDefault()
-        
+
         const newUser = { ...formData }
 
         dispatch(register(newUser))
@@ -59,7 +59,7 @@ const SignupForm = ({formData, setFormData}) => {
                 onChange={onChangeInput}/>
             </div>
             <div className="formInputContainer">
-                <label htmlFor="password" className="form-label">Password</label>
+                <label htmlFor="password" className="form-label">Create a password</label>
                 <input type="password" id="password" name="password" value={password} className={`form-control`} 
                 onChange={onChangeInput}/>
             </div>

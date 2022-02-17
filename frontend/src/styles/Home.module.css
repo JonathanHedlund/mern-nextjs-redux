@@ -1,0 +1,33 @@
+.headerContainer {
+    display: flex;
+    justify-content: center;
+}
+
+.headerContainerInner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 90%;
+    max-width: 1100px;
+    height: 100px;
+}
+
+.headerActionLinks {
+    display: flex;
+    align-items: center;
+}
+
+.heroContainer {
+    display: flex;
+    justify-content: center;
+}
+
+.heroContainerInner {
+    margin: 0;
+    width: 90%;
+    max-width: 1100px;
+}
+
+.headerSignupButton {
+    margin-left: 30px;
+}

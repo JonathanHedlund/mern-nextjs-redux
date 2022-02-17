@@ -1,6 +1,7 @@
 import { useRouter } from 'next/router' 
 
 import LoginLayout from '../layouts/LoginLayout'
+import DashboardLayout from '../layouts/DashboardLayout'
 
 const LayoutPicker = ({children}) => {
     const router = useRouter()
@@ -12,6 +13,7 @@ const LayoutPicker = ({children}) => {
             </LoginLayout>
         )
     }
+
     else return (
         <>
             {children}

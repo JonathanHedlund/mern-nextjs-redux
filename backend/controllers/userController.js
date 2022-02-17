@@ -72,14 +72,39 @@ const loginUser = asyncHandler(async (req, res) => {
 // @route GET /api/users/me
 // @access Private
 const getMyUser = asyncHandler(async (req, res) => {
-    const { _id, name, email } = await User.findById(req.user.id)
-
-    res.status(200).json({ 
-        id: _id, 
-        name, 
-        email 
-    })
+    res.status(200).json(req.user)
 })
+
+// @desc Change user password
+// @route PUT /api/users/change-password
+// @access Private
+const changePassword = asyncHandler(async (req, res) => {
+    const { password } = req.body
+
+    if (!password) {
+        res.status(400)
+        throw new Error('No password')
+    }
+
+    // Check if user exists
+    const userExists = await User.findOne(req.user.email)
+
+    if (!userExists) {
+        res.status(400)
+        throw new Error('User does not exist')
+    }
+
+    // Hash password
+    const salt = await bcrypt.genSalt(10)
+    const hashedPassword = await bcrypt.hash(password, salt)
+
+    // Create password
+    const passwordUpdated = await Goal.findByIdAndUpdate(req.params.id, req.body, {new: true,})
+
+
+    res.status(200).json(passwordUpdated)
+})
+
 
 // Generate JWT
 const generateToken = (id) => {
@@ -92,4 +117,5 @@ module.exports = {
     registerUser,
     loginUser,
     getMyUser,
+    changePassword,
 }

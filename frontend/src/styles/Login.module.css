@@ -13,8 +13,6 @@
     z-index: 10;
 }
 
-
-
 .loginHeader {
     margin-bottom: 50px;
     margin-top: 50px;
@@ -33,5 +31,49 @@
 }
 
 .loginLinkText {
-    margin-left: 10px;
+    margin-left: 8px;
+}
+
+@media only screen and (min-width: 700px) {
+    .loginLayoutBackground {
+        background-image: url('/blob-scene-haikei.svg');
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        background-position-y: top;
+    }
+
+    .loginContainer {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .loginContainerInner {
+        width: 90%;
+        max-width: 450px;
+    }
+
+    .loginWebContainerInner {
+        padding: 20px 35px 35px;
+        box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.445);
+        background-color: #222222;
+        border-radius: 15px;
+
+    }
+
+    .loginHeader {
+        margin-bottom: 25px;
+        margin-top: 80px;
+        margin-left: 20px;
+    }
+
+    .loginRedirectLink {   
+        margin-top: 25px;
+    }
+
+    .loginButton {
+        margin-top: 30px;
+    }
 }

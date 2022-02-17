@@ -13,9 +13,12 @@ const signup = () => {
   })
 
   return (
-    <>
+    <div className={styles.loginContainer}>
+      <div className={styles.loginContainerInner}>        
         <h1 className={styles.loginHeader}>Sign up</h1>
+          <div className={styles.loginWebContainerInner}>
             <SignupForm formData={formData} setFormData={setFormData} />
+          </div>
             <div className={styles.loginRedirectLink}>
                 Already have an account?
                 <Link href="/login">
@@ -24,7 +27,8 @@ const signup = () => {
                     </a>
                 </Link>
             </div>
-    </>
+        </div>
+    </div>
   )
 }
 

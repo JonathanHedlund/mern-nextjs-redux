@@ -1,8 +1,15 @@
+import Link from 'next/link'
+
+import Header from '../components/home/Header'
+import Hero from '../components/home/Hero'
+
+
 const index = () => {
   return (
-    <div>
-      Hej fuckers
-    </div>
+    <>
+      <Header />
+      <Hero />
+    </>
   )
 }
 
