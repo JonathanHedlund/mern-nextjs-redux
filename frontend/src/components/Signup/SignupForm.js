@@ -1,8 +1,33 @@
+import { useRouter } from "next/router";
+import { useEffect } from "react";
+import { useSelector, useDispatch } from 'react-redux'
+import { toast } from 'react-toastify'
+import { register, reset } from "../../features/auth/authSlice";
+
 
 import styles from '../../styles/Login.module.css'
 
 const SignupForm = ({formData, setFormData}) => {
+    const router = useRouter();
+
     const { name, email, password } = formData
+
+    const dispatch = useDispatch()
+
+    const { user, isLoading, isError, isSuccess, message } = useSelector((state) => state.auth)
+
+    useEffect(() => {
+        if (isError) {
+            toast.error(message)
+        }
+
+        if (isSuccess || user) {
+            router.push('/dashboard')
+        }
+
+        dispatch(reset())
+
+    }, [user, isError, isSuccess, message, dispatch])
 
     const onChangeInput = (e) => {
         setFormData((prevState) => ({
@@ -11,10 +36,15 @@ const SignupForm = ({formData, setFormData}) => {
         }))
     }
     
-    const onSubmit = (e) => {
+    async function onSubmit(e) {
         e.preventDefault()
-        console.log(formData)
+        
+        const newUser = { ...formData }
+
+        dispatch(register(newUser))
     }
+
+    
 
     return (
         <form onSubmit={onSubmit}>
