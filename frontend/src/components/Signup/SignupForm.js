@@ -64,7 +64,7 @@ const SignupForm = ({formData, setFormData}) => {
                 onChange={onChangeInput}/>
             </div>
             <button type="submit" className={`btn-purple btn-large ${styles.loginButton}`}>
-                Sign up for free
+                Sign up for free!
             </button>
         </form>
     )

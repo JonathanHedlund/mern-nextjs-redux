@@ -66,6 +66,8 @@ h1 {
   box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.13);
   transition: 0.2s;
   cursor: pointer;
+  font-weight: 400;
+
 }
 
 .btn {
@@ -78,6 +80,8 @@ h1 {
   box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.13);
   transition: 0.2s;
   cursor: pointer;
+  font-weight: 400;
+
 }
 
 .btn-purple {
@@ -121,9 +125,14 @@ h1 {
   .form-control {
     background-color: #161616;
     padding: 15px 12px;
+    font-size: 1.05rem;
   }
 
   .formInputContainer {
-    margin-bottom: 15px;
+    margin-bottom: 25px;
+  }
+
+  .form-label {
+    font-size: 1.15rem;
   }
 }

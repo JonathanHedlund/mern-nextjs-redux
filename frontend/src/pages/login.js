@@ -21,13 +21,15 @@ function Login() {
                     <LoginForm formData={formData} setFormData={setFormData} />
                 </div>
                 <div className={styles.loginRedirectLink}>
-                        Don&apos;t have an account yet?
-                        <Link href="/signup">
-                            <a className={`link-purple ${styles.loginLinkText}`} >
+                    <Link href="/signup">
+                        <a>
+                            Don&apos;t have an account yet? 
+                            <br className={styles.loginLinkTextBreak}/> <span className={`link-purple ${styles.loginLinkText}`}>
                                 Register here!
-                            </a>
-                        </Link>
-                    </div>
+                            </span>
+                        </a>
+                    </Link>
+                </div>
             </div>
         </div>
     )

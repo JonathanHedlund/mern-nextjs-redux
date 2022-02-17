@@ -20,12 +20,13 @@ const Signup = () => {
             <SignupForm formData={formData} setFormData={setFormData} />
           </div>
             <div className={styles.loginRedirectLink}>
-                Already have an account?
-                <Link href="/login">
-                    <a className={`link-purple ${styles.loginLinkText}`} >
-                        Login!
-                    </a>
-                </Link>
+              <Link href="/login">
+                <a>
+                  Already have an account? <span className={`link-purple ${styles.loginLinkText}`}>
+                      Login!
+                  </span>
+                </a>
+              </Link>
             </div>
         </div>
     </div>
