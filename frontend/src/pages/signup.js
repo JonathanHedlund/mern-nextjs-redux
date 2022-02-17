@@ -5,7 +5,7 @@ import SignupForm from '../components/Signup/SignupForm'
 
 import styles from '../styles/Login.module.css'
 
-const signup = () => {
+const Signup = () => {
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -32,4 +32,4 @@ const signup = () => {
   )
 }
 
-export default signup
+export default Signup

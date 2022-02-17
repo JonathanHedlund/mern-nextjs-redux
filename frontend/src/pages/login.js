@@ -1,13 +1,13 @@
 import Link from 'next/Link'
 
-import { useEffect, useState } from 'react'
+import React, { useEffect, useState } from 'react'
 
 import LoginForm from '../components/Login/LoginForm'
 
 import styles from '../styles/Login.module.css'
 
 
-const login = () => {
+function Login() {
     const [formData, setFormData] = useState({
         email: '',
         password: ''
@@ -21,7 +21,7 @@ const login = () => {
                     <LoginForm formData={formData} setFormData={setFormData} />
                 </div>
                 <div className={styles.loginRedirectLink}>
-                        Don't have an account yet?
+                        Don&apos;t have an account yet?
                         <Link href="/signup">
                             <a className={`link-purple ${styles.loginLinkText}`} >
                                 Register here!
@@ -33,4 +33,4 @@ const login = () => {
     )
 }
 
-export default login
+export default Login

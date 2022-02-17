@@ -8,7 +8,7 @@ const LayoutPicker = ({children}) => {
 
     if (router.pathname.startsWith("/login") || router.pathname.startsWith("/signup")) {
         return (
-            <LoginLayout children={undefined}>
+            <LoginLayout>
                 {children}
             </LoginLayout>
         )

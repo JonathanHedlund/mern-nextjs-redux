@@ -4,7 +4,7 @@ import { useEffect } from 'react'
 import { useSelector, useDispatch } from 'react-redux'
 import { logout, reset } from '../features/auth/authSlice'
 
-const dashboard = () => {
+const Dashboard = () => {
   const router = useRouter()
 
   const dispatch = useDispatch()
@@ -15,7 +15,7 @@ const dashboard = () => {
     if (!user) {
       router.push('/')
     }
-  }, [user])
+  }, [user, router])
   
 
   const onLogout = () => {
@@ -32,4 +32,4 @@ const dashboard = () => {
   )
 }
 
-export default dashboard
+export default Dashboard

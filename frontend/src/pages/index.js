@@ -1,4 +1,5 @@
-import Link from 'next/link'
+
+import Link from 'next/Link'
 
 import Header from '../components/home/Header'
 import Hero from '../components/home/Hero'

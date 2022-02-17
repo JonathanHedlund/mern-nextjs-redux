@@ -27,7 +27,7 @@ const LoginForm = ({formData, setFormData}) => {
 
         dispatch(reset())
 
-    }, [user, isError, isSuccess, message, dispatch])
+    }, [user, isError, isSuccess, message, router, dispatch])
 
     const onChangeInput = (e) => {
         setFormData((prevState) => ({
