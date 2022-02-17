@@ -1,8 +1,6 @@
 .loginLayoutBackground {
     box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.445);
     height: 100vh;
-    overflow: hidden;
-    position: relative;
     display: flex;
     justify-content: center;
 }
