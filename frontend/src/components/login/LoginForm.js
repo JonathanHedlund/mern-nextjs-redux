@@ -2,15 +2,15 @@ import { useRouter } from "next/router";
 import { useEffect } from "react";
 import { useSelector, useDispatch } from 'react-redux'
 import { toast } from 'react-toastify'
-import { register, reset } from "../../features/auth/authSlice";
+import { login, reset } from "../../features/auth/authSlice";
 
 
 import styles from '../../styles/Login.module.css'
 
-const SignupForm = ({formData, setFormData}) => {
+const LoginForm = ({formData, setFormData}) => {
     const router = useRouter();
 
-    const { name, email, password } = formData
+    const { email, password } = formData
 
     const dispatch = useDispatch()
 
@@ -39,35 +39,28 @@ const SignupForm = ({formData, setFormData}) => {
     async function onSubmit(e) {
         e.preventDefault()
 
-        const newUser = { ...formData }
+        const loginUser = { ...formData }
 
-        dispatch(register(newUser))
+        dispatch(login(loginUser))
     }
-
-    
 
     return (
         <form onSubmit={onSubmit}>
             <div className="formInputContainer">
-                <label htmlFor="name" className="form-label">Name</label>
-                <input type="text" id="name" name="name" value={name} className={`form-control`} 
-                onChange={onChangeInput}/>
-            </div>
-            <div className="formInputContainer">
                 <label htmlFor="email" className="form-label">Email</label>
-                <input type="email" id="email" name="email" value={email} className={`form-control`} 
-                onChange={onChangeInput}/>
+                <input type="email" name="email" id="email" value={email} className={`form-control`} 
+                onChange={onChangeInput} />
             </div>
             <div className="formInputContainer">
-                <label htmlFor="password" className="form-label">Create a password</label>
-                <input type="password" id="password" name="password" value={password} className={`form-control`} 
-                onChange={onChangeInput}/>
+                <label htmlFor="password" className="form-label">Password</label>
+                <input type="password" name="password" id="password" value={password} className={`form-control`} 
+                onChange={onChangeInput} />
             </div>
             <button type="submit" className={`btn-purple btn-large ${styles.loginButton}`}>
-                Sign up for free!
+                Login
             </button>
         </form>
     )
 }
 
-export default SignupForm
+export default LoginForm
