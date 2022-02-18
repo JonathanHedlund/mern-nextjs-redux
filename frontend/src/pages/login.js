@@ -2,7 +2,7 @@ import Link from 'next/link'
 
 import React, { useEffect, useState } from 'react'
 
-import LoginForm from '../components/Login/LoginForm'
+import LoginForm from '../components/login/LoginForm'
 
 import styles from '../styles/Login.module.css'
 

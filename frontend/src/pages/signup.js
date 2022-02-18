@@ -1,7 +1,7 @@
 import Link from 'next/link'
 import { useEffect, useState } from 'react'
 
-import SignupForm from '../components/Signup/SignupForm'
+import SignupForm from '../components/signup/SignupForm'
 
 import styles from '../styles/Login.module.css'
 
